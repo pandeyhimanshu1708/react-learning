@@ -3,7 +3,7 @@ import { NetflixSeries } from "./components/NetflixSeries";
 import { EventHandling } from "./components/EventHandling";
 import { State } from "./hooks/State";
 import ToggleSwitch from "./projects/ToggleSwitch/ToggleSwitch";
-
+import { IoIosSwitch } from "react-icons/io";
 
 export const App = () => {
   // return [<NetflixSeries  key = "1"/>, <NetflixSeries key = "2" /> ];
@@ -32,6 +32,7 @@ export const App = () => {
       {/* <EventHandling></EventHandling>
       <State></State> */}
       { <ToggleSwitch></ToggleSwitch> }
+      
     </>
   );
 };

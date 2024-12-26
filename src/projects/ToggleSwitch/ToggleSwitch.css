@@ -1,4 +1,4 @@
-/* Center the toggle switch in the viewport */
+/* Center the entire component */
 .toggle-container {
     display: flex;
     justify-content: center;
@@ -6,6 +6,16 @@
     height: 100vh;
     background-color: #f4f4f4;
     margin: 0;
+    flex-direction: column;
+  }
+  
+  /* Style for the header */
+  h1 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
   }
   
   /* The outer toggle switch container */
@@ -13,20 +23,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 80px;
-    height: 40px;
-    border-radius: 20px;
+    width: 100px;
+    height: 50px;
+    border-radius: 25px;
     background-color: #ddd;
     padding: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     position: relative;
+    transition: background-color 0.3s ease;
   }
   
   /* The inner circle of the switch */
   .switch {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: #fff;
     transition: transform 0.3s ease;
@@ -36,17 +46,18 @@
     transform: translateY(-50%);
   }
   
-  /* When the switch is ON, change the background color and move the circle */
+  /* When the switch is ON */
   .toggle-switch.on {
     background-color: #4caf50;
   }
   
-  .toggle-switch.off {
-    background-color: #f44336;
+  .switch.on {
+    transform: translateX(50px) translateY(-50%);
   }
   
-  .switch.on {
-    transform: translateX(40px) translateY(-50%);
+  /* When the switch is OFF */
+  .toggle-switch.off {
+    background-color: #f44336;
   }
   
   .switch.off {
@@ -57,12 +68,19 @@
   .switch-state {
     position: absolute;
     top: 50%;
-    left: 10px;
-    right: 10px;
+    left: 12px;
+    right: 12px;
     transform: translateY(-50%);
     font-size: 14px;
     font-weight: bold;
     color: #fff;
     text-align: center;
+  }
+  
+  /* Style for the icon */
+  h1 .react-icons {
+    margin-left: 10px;
+    font-size: 30px;
+    color: #4caf50;
   }
   
